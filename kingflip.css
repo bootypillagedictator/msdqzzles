@@ -1,0 +1,162 @@
+/* King Crimson 'Lizard' (1970) Flipboard */
+
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=EB+Garamond:wght@400;600&display=swap');
+
+html, body {
+  background: url('https://picsur.org/i/87ebef4b-fd72-4713-90a4-75c36a04d84b.jpg') center/cover fixed no-repeat;
+  background-color: rgba(0,0,0,0.25);
+  background-blend-mode: overlay;
+  color: #fffaf0 !important;
+  font-family: "EB Garamond", serif !important;
+}
+
+/* Vignette / darkening overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 70%, rgba(0,0,0,0.7) 100%);
+  z-index: 9999;
+}
+
+/* Headlines, titles */
+h1, h2, h3, .title, .headline, .magazine-title {
+  font-family: "Uncial Antiqua", serif !important;
+  color: #f5e19b !important;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8), 0 0 10px rgba(245,225,155,0.3);
+  transition: color .25s, text-shadow .25s;
+}
+
+/* Links */
+a, a:link, a:visited {
+  color: #f6e9b0 !important;
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+  transition: color .18s, text-shadow .18s;
+}
+a:hover, a:focus {
+  color: #fffaf0 !important;
+  text-shadow: 0 0 8px rgba(245,225,155,0.5);
+}
+
+/* Cards / story tiles */
+.card, .story, .tile, .articlePreview, .magazine-article, .magazine-tile {
+  background: rgba(255,255,255,0.02) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(8px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(1.2) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.55) !important;
+  border: 1px solid rgba(245,225,155,0.06) !important;
+  transition: transform .28s, box-shadow .28s;
+}
+.card:hover, .story:hover, .tile:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.65) !important;
+}
+
+/* Modals / overlays */
+.modal, .overlay, .dialog, .popout {
+  background: rgba(255,255,255,0.03) !important;
+  backdrop-filter: blur(10px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.3) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,247,220,0.06) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.65) !important;
+  color: #fffaf0 !important;
+  padding: 20px !important;
+}
+
+/* Buttons / controls */
+button, .btn, .control, .toolbar-button, .actionButton {
+  background: linear-gradient(180deg, rgba(245,225,155,0.12), rgba(255,247,220,0.06)) !important;
+  color: #111114 !important;
+  border: 1px solid rgba(245,225,155,0.18) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45) !important;
+  transition: transform .18s, box-shadow .18s, background .18s !important;
+}
+button:hover, .btn:hover, .control:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.55) !important;
+}
+
+/* Inputs & search bars */
+input, textarea, select, .searchInput {
+  background: rgba(0,0,0,0.32) !important;
+  border: 1px solid rgba(255,247,220,0.04) !important;
+  color: #fffaf0 !important;
+  border-radius: 8px !important;
+  padding: 8px 10px !important;
+  transition: box-shadow .18s, border-color .18s !important;
+}
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 6px 24px rgba(245,225,155,0.08) !important;
+  border-color: rgba(245,225,155,0.18) !important;
+}
+
+/* Mentions / highlights */
+.mention, .highlight, .badge, .tag {
+  background: linear-gradient(90deg, rgba(245,225,155,0.22), rgba(255,247,220,0.36)) !important;
+  border-radius: 4px !important;
+  padding: 0 6px !important;
+  color: rgb(255,247,220) !important;
+  text-shadow: 0 0 8px rgba(245,225,155,0.7) !important;
+}
+
+/* Username hover shimmer */
+@keyframes fbShimmer {
+  0%   { text-shadow: 0 0 5px rgba(245,225,155,0.16); color: rgb(255,247,235); }
+  50%  { text-shadow: 0 0 12px rgba(245,225,155,0.72); color: rgb(255,255,248); }
+  100% { text-shadow: 0 0 5px rgba(245,225,155,0.16); color: rgb(255,247,235); }
+}
+.username, .userName, .authorName {
+  transition: color .25s, text-shadow .25s;
+}
+.username:hover, .userName:hover, .authorName:hover {
+  animation: fbShimmer 1.8s ease-in-out infinite !important;
+}
+
+/* Muted / small text */
+.muted, .small, .meta, .subtitle {
+  color: #f0e7c5 !important;
+  font-style: italic !important;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7) !important;
+}
+.muted:hover, .subtitle:hover {
+  color: #fffaf0 !important;
+  text-shadow: 0 0 8px rgba(245,225,155,0.6) !important;
+}
+
+/* Scrollbar — Webkit only */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245,225,155,0.25);
+  border-radius: 8px;
+  border: 2px solid rgba(0,0,0,0.18);
+}
+
+/* Transitions control */
+* {
+  transition-duration: .22s !important;
+  transition-timing-function: ease-in-out !important;
+}
+img, svg, canvas, iframe, video {
+  transition: none !important;
+}
+
+/* Responsive (smaller) */
+@media (max-width: 900px) {
+  .card, .modal, .tile {
+    padding: 14px !important;
+    border-radius: 8px !important;
+  }
+  h1 {
+    font-size: 1.6rem !important;
+  }
+}
