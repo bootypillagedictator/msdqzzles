@@ -1,0 +1,201 @@
+/* === NIGHTWING IS APPARENTLY THE SEXIEST VIGILANTE === */
+
+/* Full-page background */
+body {
+  background: url("https://picsur.org/i/833395f5-1b2f-4c0a-b185-fac2359f988e.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Exo 2", "Orbitron", "Segoe UI", sans-serif;
+  color: #e8f0ff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Dim overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 20, 0.35);
+  z-index: -2;
+}
+
+/* --- Digital Rain Canvas --- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(30,144,255,0.05) 0px,
+    rgba(30,144,255,0.05) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  animation: digitalRain 15s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Panels / Containers */
+.main, .content, .container, .panel, .post, article {
+  background: rgba(10, 20, 40, 0.14);
+  border: 1px solid rgba(30,144,255,0.25);
+  border-radius: 16px;
+  padding: 1.4rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transition: all 0.6s ease;
+}
+
+/* Sidebar / Widgets */
+.sidebar, .widget, aside {
+  background: rgba(10, 20, 40, 0.1);
+  border: 1px solid rgba(30,144,255,0.2);
+  border-radius: 14px;
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.6s ease;
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Header / Navbar */
+header, nav, .navbar, .site-header {
+  background: rgba(5, 10, 25, 0.25);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(30,144,255,0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  border-radius: 0 0 16px 16px;
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Footer */
+footer, .site-footer {
+  background: rgba(0, 0, 10, 0.25);
+  border-top: 1px solid rgba(30,144,255,0.25);
+  backdrop-filter: blur(16px);
+  color: #b8d0ff;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 16px 16px 0 0;
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Smooth Text + Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #8cc8ff;
+  text-shadow: 0 0 10px rgba(20,120,255,0.7);
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  transition: all 0.3s ease;
+}
+
+/* Buttons */
+button, .button, input[type="button"], input[type="submit"] {
+  background: rgba(20,30,50,0.15);
+  color: #e0e8f8;
+  border: 1px solid rgba(30,144,255,0.35);
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+button:hover, .button:hover {
+  background: rgba(30,144,255,0.75);
+  color: #00122a;
+  box-shadow: 0 0 20px rgba(30,144,255,1);
+  transform: translateY(-2px);
+}
+
+/* Inputs / Textareas */
+input, textarea, select {
+  background: rgba(15,25,45,0.1);
+  border: 1px solid rgba(30,144,255,0.25);
+  border-radius: 6px;
+  color: #d8e2ff;
+  padding: 0.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: rgba(30,144,255,0.8);
+  box-shadow: 0 0 10px rgba(30,144,255,0.8);
+  outline: none;
+}
+
+/* Links */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #63aaff;
+  text-shadow: 0 0 8px rgba(30,144,255,0.9);
+}
+
+/* === Nightwing Glow Animation === */
+@keyframes nightwingGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(30,144,255,0.3), 0 0 30px rgba(30,144,255,0.15);
+    border-color: rgba(30,144,255,0.25);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(30,144,255,0.7), 0 0 50px rgba(30,144,255,0.35);
+    border-color: rgba(30,144,255,0.7);
+  }
+}
+
+/* === Digital Rain Effect === */
+@keyframes digitalRain {
+  from {
+    background-position: 0 -100%;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+/* === Nightwing Emblem Watermark === */
+#nightwing-emblem {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.07;
+  background: url("https://upload.wikimedia.org/wikipedia/en/8/8a/Nightwing_Logo.svg") no-repeat center center;
+  background-size: contain;
+  filter: drop-shadow(0 0 12px rgba(30,144,255,0.6));
+  animation: emblemPulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Emblem Pulse */
+@keyframes emblemPulse {
+  0%, 100% { opacity: 0.07; filter: drop-shadow(0 0 10px rgba(30,144,255,0.4)); }
+  50% { opacity: 0.14; filter: drop-shadow(0 0 25px rgba(30,144,255,0.9)); }
+}
+
+/* Hero title */
+.hero-title {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  color: #63aaff;
+  text-shadow: 0 0 25px rgba(20,120,255,0.9);
+  letter-spacing: 1.5px;
+  animation: nightwingGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main, .content, .container { padding: 1rem; }
+  .hero-title { font-size: 2rem; }
+}
