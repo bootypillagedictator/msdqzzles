@@ -1,0 +1,57 @@
+/* King Crimson 'Lizard' — Cosmos */
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=EB+Garamond:wght@400;600&display=swap');
+
+body,html{margin:0;height:100%;font-family:"EB Garamond",serif;color:#fffaf0;background:url('https://picsur.org/i/87ebef4b-fd72-4713-90a4-75c36a04d84b.jpg')center/cover no-repeat fixed;background-color:rgba(0,0,0,.25);background-blend-mode:overlay;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;background:radial-gradient(circle,rgba(0,0,0,0)0%,rgba(0,0,0,.35)70%,rgba(0,0,0,.7)100%)}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6,.title{font-family:"Uncial Antiqua",serif!important;color:#f5e19b;text-shadow:0 0 8px rgba(0,0,0,.8),0 0 10px rgba(245,225,155,.3);letter-spacing:.8px;transition:.25s}
+
+/* Text & links */
+p,li,span{color:#fffaf0;text-shadow:0 0 3px rgba(0,0,0,.7)}
+a{color:#f6e9b0;text-decoration:underline;text-shadow:0 0 4px rgba(0,0,0,.6);transition:.18s}
+a:hover{color:#fffaf0;text-shadow:0 0 8px rgba(245,225,155,.5)}
+
+/* Cards / Panels */
+.card,.panel,.cosmos-card{background:rgba(255,255,255,.02);border-radius:10px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.55);backdrop-filter:blur(8px)saturate(120%);border:1px solid rgba(245,225,155,.06);transition:.28s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,.65)}
+
+/* Modals */
+.modal,.dialog{background:rgba(255,255,255,.03);backdrop-filter:blur(10px)saturate(130%);border-radius:12px;border:1px solid rgba(255,247,220,.06);box-shadow:0 20px 60px rgba(0,0,0,.65);padding:20px;color:#fffaf0}
+.modal::before{content:"";position:absolute;inset:0;background:url('https://picsur.org/i/87ebef4b-fd72-4713-90a4-75c36a04d84b.jpg')center/cover;opacity:.06;border-radius:inherit;pointer-events:none}
+
+/* Navbar / Sidebar */
+header,.nav,.sidebar{background:rgba(0,0,0,.3);border-bottom:1px solid rgba(245,225,155,.03);box-shadow:0 6px 20px rgba(0,0,0,.55)}
+.nav a,.sidebar a{padding:8px 10px;border-radius:6px;transition:.18s}
+.nav a:hover{background:rgba(245,225,155,.06);color:#fffaf0}
+
+/* Buttons */
+button,.btn{background:linear-gradient(180deg,rgba(245,225,155,.12),rgba(255,247,220,.06));color:#111;border:1px solid rgba(245,225,155,.18);padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.45);transition:.18s}
+button:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,.55)}
+.btn.primary{background:linear-gradient(320deg,#f5e19b,#fff7dc);color:#111;border:1px solid rgba(245,225,155,.2)}
+
+/* Inputs */
+input,textarea,select{background:rgba(0,0,0,.32);border:1px solid rgba(255,247,220,.04);color:#fffaf0;padding:8px 10px;border-radius:8px;outline:none;transition:.18s}
+input:focus,textarea:focus{box-shadow:0 6px 24px rgba(245,225,155,.08);border-color:rgba(245,225,155,.18)}
+
+/* Mentions / Highlights */
+.mention,.highlight{background:linear-gradient(90deg,rgba(245,225,155,.22),rgba(255,247,220,.36));border-radius:4px;padding:0 6px;color:#fff7dc!important;text-shadow:0 0 8px rgba(245,225,155,.7);font-weight:600}
+
+/* Shimmer usernames */
+@keyframes shimmer{0%{text-shadow:0 0 5px rgba(245,225,155,.16);color:#fff7eb}50%{text-shadow:0 0 12px rgba(245,225,155,.72);color:#fffff8}100%{text-shadow:0 0 5px rgba(245,225,155,.16);color:#fff7eb}}
+.username:hover{animation:shimmer 1.8s ease-in-out infinite}
+
+/* Activity / Muted text */
+.muted,.activity{color:#f0e7c5!important;font-style:italic;text-shadow:0 0 4px rgba(0,0,0,.7)}
+.activity:hover{color:#fffaf0!important;text-shadow:0 0 8px rgba(245,225,155,.6)}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:rgba(245,225,155,.25);border-radius:8px}
+
+/* Transitions */
+*{transition:.22s ease-in-out!important}
+img,svg,video,iframe{transition:none!important}
+
+/* Responsive */
+@media(max-width:900px){.card,.modal{padding:14px;border-radius:8px}h1{font-size:1.6rem}}
